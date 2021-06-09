@@ -17,23 +17,23 @@ const Skill = require('../models/skill');
  * @param {express.Response} res
  */
 const index = function (req, res) {
-  res.render('skills/index', {
-    skills: Skill.getAll(),
-  });
-};
-/**
- * Render a single skill view.
- * @param {express.Request} req
- * @param {express.Response} res
- */
-// show = function (req, res) {
-//   res.render('skills/show', {
-//     todo: Skill.getOne(req.params.id),
-//   });
-// };
+    res.render('skills/index', {
+      skills: Skill.getAll(),
+    });
+  },
+  /**
+   * Render a single skill view.
+   * @param {express.Request} req
+   * @param {express.Response} res
+   */
+  show = function (req, res) {
+    res.render('skills/show', {
+      skill: Skill.getOne(req.params.id),
+    });
+  };
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = {
   index,
-  // show,
+  show,
 };
