@@ -17,10 +17,9 @@ const Skill = require('../models/skill');
  * @param {express.Response} res
  */
 const index = function (req, res) {
-  res.render('Skills list goes here!');
-  // res.render('skills/index', {
-  //   skills: Skill.getAll(),
-  // });
+  res.render('skills/index', {
+    skills: Skill.getAll(),
+  });
 };
 /**
  * Render a single skill view.

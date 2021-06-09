@@ -14,9 +14,7 @@ const express = require('express'),
   skillsCtrl = require('../controllers/skills');
 
 /*----- Routes ---------------------------------------------------------------*/
-router.get('/', function (req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', skillsCtrl.index);
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = router;
