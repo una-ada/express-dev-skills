@@ -10,6 +10,7 @@ const createError = require('http-errors'),
   path = require('path'),
   cookieParser = require('cookie-parser'),
   logger = require('morgan'),
+  methodOverride = require('method-override'),
   indexRouter = require('./routes/index'),
   skillsRouter = require('./routes/skills');
 
@@ -17,6 +18,7 @@ const createError = require('http-errors'),
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
