@@ -5,7 +5,7 @@ const createError = require('http-errors'),
   cookieParser = require('cookie-parser'),
   logger = require('morgan'),
   indexRouter = require('./routes/index'),
-  usersRouter = require('./routes/users');
+  skillsRouter = require('./routes/skills');
 
 /*----- Initialize -----------------------------------------------------------*/
 const app = express();
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /*----- Routers --------------------------------------------------------------*/
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/skills', skillsRouter);
 
 /*----- Errors ---------------------------------------------------------------*/
 app.use(function (req, res, next) {
