@@ -4,6 +4,7 @@
  * @version 2021.06.09
  * @module controllers/skills
  * @see module:routes/skills
+ * @see module:model/skill
  */
 
 /*----- Imports --------------------------------------------------------------*/
