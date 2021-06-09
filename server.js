@@ -1,3 +1,9 @@
+/**
+ * Main server script.
+ * @author Una Ada <una@anarchy.website>
+ * @version 2021.06.09
+ */
+
 /*----- Imports --------------------------------------------------------------*/
 const createError = require('http-errors'),
   express = require('express'),
