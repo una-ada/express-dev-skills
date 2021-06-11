@@ -62,13 +62,13 @@ const getAll = function () {
   deleteOne = function (id) {
     (i =>
       // Check that Skill exists
-      ~i ||
+      ~i &&
       // Remove Skill from skills[]
       skills.splice(i, 1))(
       // Pass in index of Skill
       skills.findIndex(
         // Find index of Skill with specified ID
-        skill => skill.id === id
+        skill => skill.id === +id
       )
     );
   };
