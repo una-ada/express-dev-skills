@@ -48,7 +48,16 @@ const index = function (req, res) {
     req.body.confidence = +req.body.confidence;
     Skill.create(req.body);
     res.redirect('/skills');
-  };
+  },
+  /**
+   * Delete a single skill by ID.
+   * @param {express.Request} req
+   * @param {express.Response} res
+   */
+  deleteSkill = function (req, res) {
+    Skill.deleteOne(req.params.id);
+    res.redirect('/skills')
+  }
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = {
@@ -56,4 +65,5 @@ module.exports = {
   show,
   new: newSkill,
   create,
+  delete: deleteSkill,
 };
