@@ -30,10 +30,19 @@ const index = function (req, res) {
     res.render('skills/show', {
       skill: Skill.getOne(req.params.id),
     });
+  },
+  /**
+   * Render a new skill form view.
+   * @param {express.Request} req
+   * @param {express.Response} res
+   */
+  newSkill = function (req, res) {
+    res.render('/skills/new');
   };
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = {
   index,
   show,
+  new: newSkill,
 };
