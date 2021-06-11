@@ -16,7 +16,7 @@ const express = require('express'),
 /*----- Routes ---------------------------------------------------------------*/
 router.get('/', skillsCtrl.index);
 router.get('/:id', skillsCtrl.show);
-router.get('/new', skills.new);
+router.get('/new', skillsCtrl.new);
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = router;
