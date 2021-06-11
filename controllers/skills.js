@@ -37,7 +37,7 @@ const index = function (req, res) {
    * @param {express.Response} res
    */
   newSkill = function (req, res) {
-    res.render('/skills/new');
+    res.render('skills/new');
   };
 
 /*----- Exports --------------------------------------------------------------*/

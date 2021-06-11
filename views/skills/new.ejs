@@ -10,7 +10,18 @@
   <body>
     <h1>Add Skill</h1>
     <form action="/skills" method="POST">
-      
+      <label>Skill: <input type="text" name="skill" /></label><br />
+      <label
+        >Confidence Level
+        <select name="confidence">
+          <option value="1">Newbie</option>
+          <option value="2">Beginner</option>
+          <option value="3">Intermediate</option>
+          <option value="4">Experienced</option>
+          <option value="5">Expert</option>
+        </select></label
+      >
+      <input type="submit" value="Add Skill" />
     </form>
   </body>
 </html>
