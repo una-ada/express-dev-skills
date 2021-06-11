@@ -48,6 +48,23 @@ const getAll = function () {
     // Add ID to skill
     skill.id = +new Date() % 1e6;
     skills.push(skill);
+  },
+  /**
+   * Delete a single Skill by ID.
+   * @param {number} id The ID of the Skill to be deleted.
+   */
+  deleteOne = function (id) {
+    (i =>
+      // Check that Skill exists
+      ~i ||
+      // Remove Skill from skills[]
+      skills.splice(i, 1))(
+      // Pass in index of Skill
+      skills.findIndex(
+        // Find index of Skill with specified ID
+        skill => skill.id === id
+      )
+    );
   };
 
 /*----- Exports --------------------------------------------------------------*/
@@ -55,4 +72,5 @@ module.exports = {
   getAll,
   getOne,
   create,
+  deleteOne,
 };

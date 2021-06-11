@@ -57,7 +57,7 @@ const index = function (req, res) {
   deleteSkill = function (req, res) {
     Skill.deleteOne(req.params.id);
     res.redirect('/skills')
-  }
+  };
 
 /*----- Exports --------------------------------------------------------------*/
 module.exports = {
