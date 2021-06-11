@@ -20,6 +20,12 @@ const skills = [
   { id: 148755, skill: 'JavaScript', confidence: 5 },
   { id: 150269, skill: 'HTML', confidence: 5 },
   { id: 151663, skill: 'CSS', confidence: 5 },
+  { id: 334505, skill: 'SCSS', confidence: 5 },
+  { id: 348738, skill: 'Java', confidence: 4 },
+  { id: 361627, skill: 'PHP', confidence: 3 },
+  { id: 375927, skill: 'SQL', confidence: 3 },
+  { id: 390269, skill: 'Python', confidence: 3 },
+  { id: 402173, skill: 'Haskell', confidence: 2 },
 ];
 
 /*----- Methods --------------------------------------------------------------*/
