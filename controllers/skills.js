@@ -38,6 +38,16 @@ const index = function (req, res) {
    */
   newSkill = function (req, res) {
     res.render('skills/new');
+  },
+  /**
+   * Create a new skill.
+   * @param {express.Request} req
+   * @param {express.Response} res
+   */
+  create = function (req, res) {
+    req.body.confidence = +req.body.confidence;
+    Skill.create(req.body);
+    res.redirect('/skills');
   };
 
 /*----- Exports --------------------------------------------------------------*/
@@ -45,4 +55,5 @@ module.exports = {
   index,
   show,
   new: newSkill,
+  create,
 };
